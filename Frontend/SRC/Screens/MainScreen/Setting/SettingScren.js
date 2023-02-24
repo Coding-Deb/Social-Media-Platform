@@ -35,7 +35,9 @@ export default function SettingScren() {
             <View style={{ height: height, width: width, alignItems: 'center', justifyContent: 'space-between' }}>
                 <Header page={'Setting'} />
                 <View style={{ width: width, alignItems: 'center', bottom: 180 }}>
-                    <Pressable style={{ height: 50, width: width, borderBottomColor: 'black', borderBottomWidth: 2, marginBottom: 12, justifyContent: 'space-between', flexDirection: 'row' }}>
+                    <Pressable style={{ height: 50, width: width, borderBottomColor: 'black', borderBottomWidth: 2, marginBottom: 12, justifyContent: 'space-between', flexDirection: 'row' }}
+                        onPress={() => { navigation.navigate('ChangeUserDetails') }}
+                    >
                         <Text style={{ fontSize: 20, fontWeight: '800', marginLeft: 12 }}>
                             Change Username
                         </Text>
@@ -48,7 +50,7 @@ export default function SettingScren() {
                         <FontAwesome name="user" size={25} color="black" style={{ marginRight: 30 }} />
                     </Pressable>
                     <Pressable style={{ height: 50, width: width, borderBottomColor: 'black', borderBottomWidth: 2, marginBottom: 12, justifyContent: 'space-between', flexDirection: 'row' }}
-                    onPress={()=>{navigation.navigate('ChangeUserDetails')}}
+                        onPress={() => { navigation.navigate('ChangeUserDetails') }}
                     >
                         <Text style={{ fontSize: 20, fontWeight: '800', marginLeft: 12 }}>
                             Change Password

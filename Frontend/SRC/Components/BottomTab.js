@@ -31,7 +31,7 @@ export default function BottomTab({ page }) {
                         <MaterialIcons name="chat-bubble-outline" color="#0E8F61" size={30} />
                 }
             </Pressable>
-            <Pressable>
+            <Pressable onPress={() => { navigation.navigate('MyPost') }}>
                 <Ionicons name="add-circle" color="#0E8F61" size={40} />
             </Pressable>
             <Pressable onPress={() => { navigation.navigate('Notification') }}>

@@ -16,7 +16,7 @@ import { Ionicons } from "react-native-vector-icons";
 const height = Dimensions.get("window").height;
 const width = Dimensions.get("window").width;
 
-export default function Header({ page }) {
+export default function Header({ page, name }) {
   const navigation = useNavigation();
   const [show, setShow] = useState(false);
   return (
@@ -142,6 +142,31 @@ export default function Header({ page }) {
             My Profile
           </Text>
         ) : null}
+        {page === "MainChat" ? (
+          <View style={{ width: width, flexDirection: 'row', alignItems: 'center' }}>
+            <Image
+              source={require('../../assets/ALL_iMAGE/Cartoon.jpg')}
+              style={{
+                height: 40, width: 40, borderRadius: 30, marginTop: 30,
+                marginLeft: 20,
+                marginBottom: 15
+              }}
+              resizeMode='contain'
+            />
+            <Text
+              style={{
+                fontSize: 27,
+                fontWeight: "bold",
+                color: "#0E8F61",
+                marginTop: 30,
+                marginLeft: 20,
+                marginBottom: 15,
+              }}
+            >
+              {name}
+            </Text>
+          </View>
+        ) : null}
 
         {page === "ChangeDetails" ? (
           <Text
@@ -155,6 +180,20 @@ export default function Header({ page }) {
             }}
           >
             Change Details
+          </Text>
+        ) : null}
+        {page === "MyPost" ? (
+          <Text
+            style={{
+              fontSize: 27,
+              fontWeight: "bold",
+              color: "#0E8F61",
+              marginTop: 30,
+              marginLeft: 20,
+              marginBottom: 15,
+            }}
+          >
+            My Post
           </Text>
         ) : null}
 
@@ -171,22 +210,12 @@ export default function Header({ page }) {
             navigation.navigate("Profile");
           }}
         >
-          <FontAwesome5 name="user-circle" color="#0E8F61" size={25} />
-        </Pressable>
-      ) : null}
-      {page === "Profile" ? (
-        <Pressable
-          style={{
-            marginTop: 30,
-            marginRight: 15,
-            marginBottom: 15,
-            // alignItems: "center",
-          }}
-          onPress={() => {
-            navigation.navigate("Setting");
-          }}
-        >
-          <Ionicons name="settings-sharp" color="#0E8F61" size={30} />
+          {/* <FontAwesome5 name="user-circle" color="#0E8F61" size={25} /> */}
+          <Image
+            source={require('../../assets/ALL_iMAGE/Cartoon.jpg')}
+            style={{ height: 40, width: 40, borderRadius: 30 }}
+            resizeMode='contain'
+          />
         </Pressable>
       ) : null}
 

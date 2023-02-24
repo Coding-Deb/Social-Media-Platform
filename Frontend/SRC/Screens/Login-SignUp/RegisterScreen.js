@@ -16,7 +16,6 @@ export default function RegisterScreen() {
   const [cpassword, setCpassword] = useState('')
 
   const Submit = () => {
-
     try {
       firebase.auth().createUserWithEmailAndPassword(email, password)
         .then((usercred) => {

@@ -65,18 +65,21 @@ export default function ChangeUserDetails() {
             }
             getuserdata();
             setNewName('')
-            navigation.navigate('Profile')
+            navigation.navigate('Setting')
         }
         else {
             console.log('no user data');
         }
     }
 
+   
+
+
     return (
         <View style={styles.container}>
             <Header page={'ChangeDetails'} />
             <View style={{ height: height, width: width, alignItems: 'center', justifyContent: 'center' }}>
-                
+
                 <TextInput
                     placeholder='Enter Your New UserName'
                     value={newname}
@@ -84,7 +87,7 @@ export default function ChangeUserDetails() {
                     style={{ height: 55, width: width - 50, justifyContent: 'center', padding: 12, borderColor: 'black', borderWidth: 2, margin: 20, fontSize: 20, fontWeight: '700' }}
                 />
                 <Pressable style={{ height: 70, width: 1 / 2 * width + 10, alignItems: 'center', justifyContent: "center", backgroundColor: '#088F8F', borderRadius: 20, margin: 20 }}
-                    onPress={() => { updateuser() }}>
+                    onPress={() => { Submit() }}>
                     <Text style={{ fontSize: 20, fontWeight: 'bold', color: 'white' }}>
                         Update
                     </Text>
