@@ -1,0 +1,33 @@
+{
+  "expo": {
+    "name": "Frontend",
+    "slug": "Frontend",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/ALL_iMAGE/AVIDA_SHOP.jpg",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/ALL_iMAGE/AVIDA_SHOP.jpg",
+      "resizeMode": "contains",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/ALL_iMAGE/AVIDA_SHOP.jpg",
+        "backgroundColor": "#FFFFFF"
+      }
+    },
+    "web": {
+      "favicon": "./assets/ALL_iMAGE/AVIDA_SHOP.jpg"
+    }
+  }
+}
